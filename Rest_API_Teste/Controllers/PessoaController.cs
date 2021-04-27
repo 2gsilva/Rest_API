@@ -13,6 +13,10 @@ namespace Rest_API_Teste.Controllers
     [ApiController]
     public class PessoaController : ControllerBase
     {
+        /// <summary>
+        /// Método para cadastrar pessoa
+        /// </summary>
+        /// <returns></returns>
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -29,6 +33,11 @@ namespace Rest_API_Teste.Controllers
             return BadRequest();
         }
 
+        /// <summary>
+        /// Método para consultar pessoa
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet]
         [Route("{id:int}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
