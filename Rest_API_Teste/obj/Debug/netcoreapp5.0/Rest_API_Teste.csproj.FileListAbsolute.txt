@@ -42,7 +42,6 @@ C:\RepoPessoal\Rest_API\Rest_API_Teste\bin\Debug\netcoreapp5.0\System.Diagnostic
 C:\RepoPessoal\Rest_API\Rest_API_Teste\bin\Debug\netcoreapp5.0\System.IdentityModel.Tokens.Jwt.dll
 C:\RepoPessoal\Rest_API\Rest_API_Teste\bin\Debug\netcoreapp5.0\System.Linq.Dynamic.Core.dll
 C:\RepoPessoal\Rest_API\Rest_API_Teste\bin\Debug\netcoreapp5.0\YamlDotNet.dll
-C:\RepoPessoal\Rest_API\Rest_API_Teste\obj\Debug\netcoreapp5.0\Rest_API_Teste.csprojAssemblyReference.cache
 C:\RepoPessoal\Rest_API\Rest_API_Teste\obj\Debug\netcoreapp5.0\Rest_API_Teste.GeneratedMSBuildEditorConfig.editorconfig
 C:\RepoPessoal\Rest_API\Rest_API_Teste\obj\Debug\netcoreapp5.0\Rest_API_Teste.AssemblyInfoInputs.cache
 C:\RepoPessoal\Rest_API\Rest_API_Teste\obj\Debug\netcoreapp5.0\Rest_API_Teste.AssemblyInfo.cs
@@ -58,3 +57,4 @@ C:\RepoPessoal\Rest_API\Rest_API_Teste\obj\Debug\netcoreapp5.0\Rest_API_Teste.dl
 C:\RepoPessoal\Rest_API\Rest_API_Teste\obj\Debug\netcoreapp5.0\ref\Rest_API_Teste.dll
 C:\RepoPessoal\Rest_API\Rest_API_Teste\obj\Debug\netcoreapp5.0\Rest_API_Teste.pdb
 C:\RepoPessoal\Rest_API\Rest_API_Teste\obj\Debug\netcoreapp5.0\Rest_API_Teste.genruntimeconfig.cache
+C:\RepoPessoal\Rest_API\Rest_API_Teste\obj\Debug\netcoreapp5.0\Rest_API_Teste.csproj.AssemblyReference.cache
