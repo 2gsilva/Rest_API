@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/Rest_API_Teste/bin/Debug/netcoreapp5.0/Rest_API_Teste.dll",
+            "program": "${workspaceFolder}/Rest_API/bin/Debug/netcoreapp5.0/Rest_API.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/Rest_API_Teste",
+            "cwd": "${workspaceFolder}/Rest_API",
             "stopAtEntry": false,
             // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
             "serverReadyAction": {
