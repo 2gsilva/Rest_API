@@ -22,7 +22,7 @@ namespace Rest_API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<Context.AppContext>(opt => opt.UseInMemoryDatabase("Database"));
+            services.AddDbContext<Context.AppContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddScoped<Context.AppContext, Context.AppContext>();
             services.AddCors();
             services.AddControllers();

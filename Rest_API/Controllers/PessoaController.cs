@@ -46,7 +46,7 @@ namespace Rest_API.Controllers
         }
 
         /// <summary>
-        /// Método para consultar pessoa
+        /// Método para consultar pessoa por id
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -58,6 +58,27 @@ namespace Rest_API.Controllers
         public async Task<ActionResult<Pessoa>> Get([FromRoute] int id)
         {
             var pessoas = await _context.Pessoas.Where(p => p.PessoaId == id).FirstOrDefaultAsync();
+
+            if (pessoas != null)
+            {
+                return Ok(pessoas);
+            }
+
+            return NotFound();
+        }
+        
+        /// <summary>
+        /// Método para retornar todas as pessoas cadastradas
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Authorize]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+
+        public async Task<<Pessoa> Get()
+        {
+            var pessoas = await _context.Pessoas.ToList();
 
             if (pessoas != null)
             {
@@ -80,16 +101,17 @@ namespace Rest_API.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult> Put(int id, [FromBody] Pessoa model)
         {
-            var pessoas = await _context.Pessoas.Where(p => p.PessoaId == id).FirstOrDefaultAsync();
+            var pessoa = await _context.Pessoas.Where(p => p.PessoaId == id).FirstOrDefaultAsync();
 
             if (ModelState.IsValid)
             {
-                if (pessoas == null)
+                if (pessoa == null)
                 {
                     return NotFound();
                 }
 
-                _context.Entry(model).State = EntityState.Modified;
+                //_context.Entry(model).State = EntityState.Modified;
+                _context.Pessoas.Update(model);
                 await _context.SaveChangesAsync();
 
                 return NoContent();

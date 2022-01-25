@@ -25,14 +25,16 @@ namespace Rest_API.Service
 
         public string GerarToken(Usuario usuario)
         {
-            // A classe  JwtSecurityTokenHandler é utilizada para gerar um Token baseado em algumas informações que podemos prover.
+            // A classe  JwtSecurityTokenHandler é utilizada para gerar um Token baseado
+            // em algumas informações que podemos prover.
             var tokenHandler = new JwtSecurityTokenHandler();
 
             // Essa é a chave privada (ou chave secreta) que se encontra no AppSettings.
             var secretKey = Encoding.ASCII.GetBytes(_configuration["secretKey"].ToString());
 
-            // Estas informações são chamadas de SecurityTokenDescriptor e elas proveem dentre outras opções,
-            // o usuário e senha, tornando-os também disponíveis no ClaimIdentity do ASP.NET.
+            // Estas informações são chamadas de SecurityTokenDescriptor e elas proveem
+            // dentre outras opções, o usuário e senha, tornando-os também disponíveis no
+            // ClaimIdentity do ASP.NET.
             var tokenDecriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new Claim[]
