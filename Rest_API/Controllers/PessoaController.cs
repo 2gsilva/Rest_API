@@ -23,7 +23,7 @@ namespace Rest_API.Controllers
         }
 
         /// <summary>
-        /// Método para cadastrar pessoa
+        /// Cadastrar pessoa
         /// </summary>
         /// <returns></returns>
         [HttpPost]
@@ -46,10 +46,10 @@ namespace Rest_API.Controllers
         }
 
         /// <summary>
-        /// Método para consultar pessoa por id
+        /// Consultar pessoa por id
         /// </summary>
         /// <param name="id"></param>
-        /// <returns></returns>
+        /// <returns>pessoa com id correspondente</returns>
         [HttpGet]
         [Route("{id:int}")]
         [Authorize]
@@ -70,9 +70,9 @@ namespace Rest_API.Controllers
 
 
         /// <summary>
-        /// Método para retornar todas as pessoas cadastradas
+        /// Retornar todas as pessoas cadastradas
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Coleção de pessoas</returns>
         [HttpGet]
         [Authorize]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -92,7 +92,7 @@ namespace Rest_API.Controllers
 
 
         /// <summary>
-        /// Método para alterar dados da pessoa
+        /// Alterar dados de pessoa
         /// </summary>
         /// <param name="id"></param>
         /// <param name="model"></param>
