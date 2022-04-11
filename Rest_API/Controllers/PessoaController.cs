@@ -66,7 +66,9 @@ namespace Rest_API.Controllers
 
             return NotFound();
         }
-        
+
+
+
         /// <summary>
         /// Método para retornar todas as pessoas cadastradas
         /// </summary>
@@ -74,19 +76,20 @@ namespace Rest_API.Controllers
         [HttpGet]
         [Authorize]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
-
-        public async Task<<Pessoa> Get()
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        public async Task<ActionResult<List<Pessoa>>> Get()
         {
-            var pessoas = await _context.Pessoas.ToList();
+            var pessoas = _context.Pessoas.ToList();
 
             if (pessoas != null)
             {
                 return Ok(pessoas);
             }
 
-            return NotFound();
+            return NoContent();
         }
+
+
 
         /// <summary>
         /// Método para alterar dados da pessoa
