@@ -1,2 +1,3 @@
 # Rest_API
-POC de uma API Rest com .Net Core
+
+Api Rest, desenvolvida em .net core, com autenticação JWT
