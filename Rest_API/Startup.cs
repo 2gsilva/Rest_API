@@ -28,9 +28,10 @@ namespace Rest_API
             services.AddControllers();
             
             // Ao informar sobre a autenticação, já informamos também o tipo dela, neste caso 
-            //JwtBearer e seu modelo de autenticação (Challenge). Neste caso, ambos ficam como 
-            //padrão do JwtBearer.
+            // JwtBearer e seu modelo de autenticação (Challenge). Neste caso, ambos ficam como 
+            // padrão do JwtBearer.
             var secretKey = Encoding.ASCII.GetBytes(Configuration["secretKey"].ToString());
+            
             services.AddAuthentication(x => 
             {
                 x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -50,14 +51,14 @@ namespace Rest_API
             });
 
 
-            // Registre os servi�os Swagger
-            // Configurando documenta��o do Swagger
+            // Registre os serviços Swagger
+            // Configurando documentação do Swagger
             services.AddSwaggerDocument(config =>
             {
                 config.PostProcess = document =>
                 {
                     document.Info.Version = "v1";
-                    document.Info.Title = "Gest�o de Pessoas";
+                    document.Info.Title = "Gestão de Pessoas";
                     document.Info.Description = "API .Net Core 5.0";
                     document.Info.TermsOfService = "None";
                     document.Info.Contact = new NSwag.OpenApiContact
